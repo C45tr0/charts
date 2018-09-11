@@ -37,6 +37,10 @@ spec:
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy | quote }}
         #hostNetwork: {{ default false .Values.hostNetwork }}
+{{- if .Values.privileged }}
+          securityContext:
+            privileged: true
+{{- end }}
         env:
         - name: AWS_REGION
           value: {{ .Values.awsRegion }}

@@ -6,6 +6,11 @@ image:
 ## ref: http://kubernetes.io/docs/user-guide/images/#updating-images
   pullPolicy: IfNotPresent
 
+## Specify whether or not this should run in privileged mode
+## Stated in the main repo that this is needed
+## https://github.com/fluent/fluentd-kubernetes-daemonset
+privileged: true
+
 ## Configure resource requests and limits
 ## ref: http://kubernetes.io/docs/user-guide/compute-resources/
 ##
