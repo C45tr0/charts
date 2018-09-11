@@ -25,7 +25,13 @@ tolerations: []
 #     operator: Exists
 #     effect: NoSchedule
 
-annotations: {}
+## Annotations to be added to pods
+##
+podAnnotations: {}
+
+## Labels to be added to pods
+##
+podLabels: {}
 
 awsRegion: us-east-1
 awsRole:
